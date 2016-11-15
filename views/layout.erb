@@ -14,28 +14,32 @@
 		<![endif]-->
 	</head>
 	<body>
+
 		<div class="container">
 
 			<!-- Static navbar -->
-			<nav class="navbar navbar-default" role="navigation">
+			<nav class="navbar navbar-inverse" role="navigation">
 			  <div class="navbar-header">
-			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-			      <span class="sr-only">Toggle navigation</span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			    </button>
-			    <a class="navbar-brand" href="/">My Website</a>
+			    <a class="navbar-brand" href="/">pizzaHouse</a>
 			  </div>
 			  <div class="navbar-collapse collapse">
 			    <ul class="nav navbar-nav">
-			      <li><a href="/about">About</a></li>
+			      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/pizzas">Сделать заказ<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+		          <li><a href="/pizzas">Пицца</a></li>
+		          <li><a href="#">Напиток</a></li>
+		        </ul></li>
 			      <li><a href="/something">Something</a></li>
 			      <li><a href="/contacts">Contacts</a></li>
 			    </ul>
+					<ul class="nav navbar-nav navbar-right">
+					      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					    </ul>
 			  </div><!--/.nav-collapse -->
 			</nav>
-
+			<!-- Static navbar -->
 			<div>
 			      <%if @error && @error.length > 0 then %>
 			          <div class="alert alert-danger"><%=@error%></div>
